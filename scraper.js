@@ -18,9 +18,9 @@ async function scrapeProduct(url){
 
 
     // price
-    const [el2] = await page.$x('//*[@id="productTitle"]');
-    const txt = el.getProperty('textContent');
-    const rawTxt = await txt.jsonValue();
+    const [el3] = await page.$x('//*[@id="priceblock_ourprice"]');
+    const txt2 = el3.getProperty('textContent');
+    const price = await txt2.jsonValue();
 
     console.log({srcTxt});
     console.log({rawTxt});
