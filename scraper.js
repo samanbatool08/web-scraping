@@ -8,11 +8,16 @@ async function scrapeProduct(url){
     // image 
     const [el] = await page.$x('//*[@id="ivLargeImage"]/img');
     const src = el.getProperty('src');
-    const srcTxt = (await src).jsonValue();
+    const srcTxt = src.jsonValue();
 
 
-
+    // title 
+    const [el2] = await page.$x('//*[@id="productTitle"]');
+    const txt = el.getProperty('textContent');
+    const rawTxt = await txt.jsonValue();
+    
     console.log({srcTxt});
+    console.log({rawTxt});
 
     browser.close();
 }
