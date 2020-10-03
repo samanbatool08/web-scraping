@@ -24,6 +24,8 @@ async function scrapeProduct(url){
 
     console.log({srcTxt});
     console.log({rawTxt});
+    console.log({price});
+
 
     browser.close();
 }
