@@ -1,5 +1,8 @@
 const puppeteer = require('puppeteer');
 
+
+//copy xpath or fll xpath in page inspect after highlighting target 
+
 async function scrapeProduct(url){
     const browser = await puppeteer.launch(); 
     const page = await browser.newPage();
